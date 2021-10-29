@@ -106,11 +106,18 @@ class RatingController extends Controller
     // for($i=0; $i<count($num_of_ratings);$i++){
     //     $avg=$avg+
     // }
-    foreach ($num_of_ratings as $num_of_stars) {
+    if(count($num_of_ratings)>0){
+        foreach ($num_of_ratings as $num_of_stars) {
         $avg= $avg+ $num_of_stars->stars_rated;
 
     }
     echo "average rating is ". $avg/count($num_of_ratings);
+    }
+    else{
+        echo "no ratings done yet";
+    }
+
+
 }
 
 }
