@@ -11,5 +11,6 @@ class services extends Model
     protected $fillable = [
         'service_name',
         'description',
+        'avg_rating',
     ];
 }

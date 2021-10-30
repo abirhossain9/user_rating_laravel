@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rating;
+use App\Models\services;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
@@ -99,7 +100,11 @@ class RatingController extends Controller
 
     //$rating = new Rating();
     $service_id = $request->service_id;
+    $id = $service_id;
     $num_of_ratings= Rating::orderBy('id','asc')->where('service_id',$service_id)->get();
+    $service = services::find($id);
+    // dd($service);
+    // exit();
     //echo $service_id;
     //dd($num_of_ratings);
     $avg= 0;
@@ -111,13 +116,14 @@ class RatingController extends Controller
         $avg= $avg+ $num_of_stars->stars_rated;
 
     }
-    echo "average rating is ". $avg/count($num_of_ratings);
+    //echo "average rating is ". $avg/count($num_of_ratings);
+    $service->avg_rating = $avg/count($num_of_ratings);
+    $service->save();
+    return view('average_rating_page',compact('service'));
     }
     else{
-        echo "no ratings done yet";
+        return view('average_rating_page',compact('service'));
     }
-
-
 }
 
 }

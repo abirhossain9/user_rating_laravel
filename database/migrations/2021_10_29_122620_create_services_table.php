@@ -17,6 +17,7 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('service_name');
             $table->text('description');
+            $table->string('avg_rating')->nullable();
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="{{route('dashboard')}}">Navbar</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -54,6 +54,9 @@
         <div class="container">
 
             <div class="row">
+                @php
+                $i = 0;
+                @endphp
                 @foreach($services as $service)
                 <div class="col-md-4">
                     <div class="card text-center border border-primary shadow-0 mb-2">
@@ -89,21 +92,41 @@
                                 </div>
                                 <div class="rating-css">
                                     <div class="star-icon form-group">
+                                        @php
+                                            $i=$i+1;
+                                        @endphp
                                         <input
                                             type="radio"
                                             value="1"
                                             name="product_rating"
                                             checked="checked"
-                                            id="rating1">
-                                        <label for="rating1" class="fa fa-star"></label>
-                                        <input type="radio" value="2" name="product_rating" id="rating2">
-                                        <label for="rating2" class="fa fa-star"></label>
-                                        <input type="radio" value="3" name="product_rating" id="rating3">
-                                        <label for="rating3" class="fa fa-star"></label>
-                                        <input type="radio" value="4" name="product_rating" id="rating4">
-                                        <label for="rating4" class="fa fa-star"></label>
-                                        <input type="radio" value="5" name="product_rating" id="rating5">
-                                        <label for="rating5" class="fa fa-star"></label>
+                                            id="rating{{$i}}">
+                                        <label for="rating{{$i}}" class="fa fa-star"></label>
+                                        @php
+                                            $i=$i+1;
+                                        @endphp
+                                        <input type="radio" value="2" name="product_rating" id="rating{{$i}}">
+                                        <label for="rating{{$i}}" class="fa fa-star"></label>
+                                        @php
+                                            $i=$i+1;
+                                        @endphp
+                                        <input type="radio" value="3" name="product_rating" id="rating{{$i}}">
+                                        <label for="rating{{$i}}" class="fa fa-star"></label>
+                                        @php
+                                            $i=$i+1;
+                                        @endphp
+                                        <input type="radio" value="4" name="product_rating" id="rating{{$i}}">
+                                        <label for="rating{{$i}}" class="fa fa-star"></label>
+                                        {{-- @php
+                                            $i=$i+1;
+                                        @endphp
+                                        <input type="radio" value="5" name="product_rating" id="rating{{$i++}}">
+                                        <label for="rating{{$i}}" class="fa fa-star"></label> --}}
+                                        @php
+                                            $i=$i+1;
+                                        @endphp
+                                        <input type="radio" value="5" name="product_rating" id="rating{{$i}}">
+                                        <label for="rating{{$i}}" class="fa fa-star"></label>
                                     </div>
                                 </div>
                                 <br>
@@ -139,7 +162,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
-        <scrip
+        <script
             src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>

@@ -11,6 +11,6 @@ class Rating extends Model
     protected $fillable = [
         'user_id',
         'service_id',
-        'stars_rated'
-    ];
+        'stars_rated',
+        ];
 }
