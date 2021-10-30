@@ -60,7 +60,10 @@
                           <h5 class="card-title">{{$service->service_name}}</h5>
                           <p class="card-text">{{$service->description}}</p>
                           @if($service->avg_rating>0)
-                          <h2 class="card-title">Average Rating {{$service->avg_rating}}</h2>
+                          <h2 class="card-title">Average Rating</h2>
+                          @for ($i=0;$i<$service->avg_rating;$i++)
+                          <label for="rating{{$i}}" class="fa fa-star" style="color: red;"></label>
+                          @endfor
                           @else
                           <h2 class="card-title">Not Rated Yet. PLease rate</h2>
                           @endif
