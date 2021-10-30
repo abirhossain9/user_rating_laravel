@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2021 at 10:09 AM
+-- Generation Time: Oct 30, 2021 at 11:51 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -111,14 +111,13 @@ CREATE TABLE `ratings` (
 --
 
 INSERT INTO `ratings` (`id`, `user_id`, `service_id`, `stars_rated`, `created_at`, `updated_at`) VALUES
-(1, '11', '4', '3', '2021-10-30 01:34:26', '2021-10-30 01:34:26'),
-(2, '11', '3', '3', '2021-10-30 02:01:53', '2021-10-30 02:01:53'),
-(3, '11', '3', '5', '2021-10-30 02:01:57', '2021-10-30 02:01:57'),
-(4, '11', '4', '5', '2021-10-30 02:03:45', '2021-10-30 02:03:45'),
-(5, '11', '4', '5', '2021-10-30 02:03:48', '2021-10-30 02:03:48'),
-(6, '11', '4', '3', '2021-10-30 02:03:50', '2021-10-30 02:03:50'),
-(7, '11', '3', '3', '2021-10-30 02:04:03', '2021-10-30 02:04:03'),
-(8, '11', '3', '5', '2021-10-30 02:04:06', '2021-10-30 02:04:06');
+(1, '11', '5', '4', '2021-10-30 03:49:50', '2021-10-30 03:49:50'),
+(2, '11', '4', '4', '2021-10-30 03:49:54', '2021-10-30 03:49:54'),
+(3, '11', '3', '3', '2021-10-30 03:49:57', '2021-10-30 03:49:57'),
+(4, '11', '1', '5', '2021-10-30 03:50:00', '2021-10-30 03:50:00'),
+(5, '11', '2', '5', '2021-10-30 03:50:03', '2021-10-30 03:50:03'),
+(6, '11', '5', '5', '2021-10-30 03:50:39', '2021-10-30 03:50:39'),
+(7, '11', '5', '3', '2021-10-30 03:50:44', '2021-10-30 03:50:44');
 
 -- --------------------------------------------------------
 
@@ -140,11 +139,11 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `service_name`, `description`, `avg_rating`, `created_at`, `updated_at`) VALUES
-(1, 'Casting Machine Operator', 'Nulla doloremque voluptatem sunt minima.', NULL, NULL, NULL),
-(2, 'Orthotist OR Prosthetist', 'Consequatur recusandae porro perferendis esse.', NULL, NULL, NULL),
-(3, 'Military Officer', 'Ut repellat non similique non.', '4', NULL, '2021-10-30 02:04:08'),
-(4, 'Transportation Manager', 'Et et aut qui non odit dignissimos.', '4', NULL, '2021-10-30 02:03:52'),
-(5, 'Irradiated-Fuel Handler', 'Aut quae sapiente minus similique.', NULL, NULL, NULL);
+(1, 'Medical Secretary', 'Laboriosam ea quia sit architecto.', NULL, NULL, NULL),
+(2, 'Engineering Teacher', 'Earum consequatur consequuntur dolorem et.', NULL, NULL, NULL),
+(3, 'Shoe and Leather Repairer', 'Quam dolorem tenetur qui nihil.', NULL, NULL, NULL),
+(4, 'Counselor', 'Qui sed ducimus provident molestiae omnis qui.', '4', NULL, '2021-10-30 03:50:15'),
+(5, 'Airframe Mechanic', 'Nam et veniam doloremque.', '4', NULL, '2021-10-30 03:50:46');
 
 -- --------------------------------------------------------
 
@@ -168,17 +167,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Dr. Cornell Kohler DVM', 'fschaefer@example.org', NULL, 'H!(udg0', NULL, NULL, NULL),
-(2, 'Zelda Sipes', 'ivy.smith@example.com', NULL, 'dQ6mQOG', NULL, NULL, NULL),
-(3, 'Kiara Lind IV', 'hharber@example.org', NULL, '[}yvSL!E', NULL, NULL, NULL),
-(4, 'Mr. Otto Conroy DDS', 'therman@example.com', NULL, '[Ap4`c:$05*cc]7t$1', NULL, NULL, NULL),
-(5, 'Delphine Towne IV', 'eula.champlin@example.org', NULL, 'G0>uWuU}v}0@vx0O?OP', NULL, NULL, NULL),
-(6, 'Jensen McClure', 'reagan50@example.net', NULL, 't_~:L/Pb}&IIPjVP\"%', NULL, NULL, NULL),
-(7, 'Raegan Gislason', 'cruickshank.kailee@example.com', NULL, '[cwTxu', NULL, NULL, NULL),
-(8, 'Prof. Donato Bode DVM', 'ykunde@example.com', NULL, 'bRzH_-Sg%', NULL, NULL, NULL),
-(9, 'Eusebio Erdman Sr.', 'felipa.strosin@example.com', NULL, 'H@?w>zy\'+>IQm-D!gwL', NULL, NULL, NULL),
-(10, 'Ms. Andreanne Padberg', 'vesta74@example.com', NULL, '\\NO/5oLhI;TNM\"D(', NULL, NULL, NULL),
-(11, 'abir hossain', 'abirhasan282@gmail.com', NULL, '$2y$10$CAgw5BjzxP5j3Po6hdq0qOA59AzbIq9GHEbTMt7jt2qu7qI.LbYbu', NULL, '2021-10-30 01:34:20', '2021-10-30 01:34:20');
+(1, 'Ms. Jane Wehner I', 'agoodwin@example.org', NULL, '$2y$10$1a5R8RWZ/UJzaUf0gNnTC.pDMhehdeIOALF.DJ/byDU1NHxzpXAyi', NULL, NULL, NULL),
+(2, 'Dr. Lavada Davis', 'alivia95@example.net', NULL, '$2y$10$pCI3HcSvMPPVWTgdiV6ao.OaAnm6W0WvE8lHdUS616Rvp8pQdIWzW', NULL, NULL, NULL),
+(3, 'Amina Johns', 'price.sasha@example.net', NULL, '$2y$10$r0ScfaQVHmp211iTh3AE3ej88j21RH1PHfScz1Vifeolw6qpI9.P.', NULL, NULL, NULL),
+(4, 'Columbus Nitzsche', 'aturner@example.com', NULL, '$2y$10$nlv76/gIfp/Vr3vCuKobcO77P7F4Mvf.Jvc.BTMmOBDSesfZuppaK', NULL, NULL, NULL),
+(5, 'Alva Beier', 'krajcik.evans@example.org', NULL, '$2y$10$M0nprkUJEnl4NPmdloXWQ.dA32bUJtv0m6BzJoQuq4yedwSvQhfiu', NULL, NULL, NULL),
+(6, 'Dr. Morris Stamm MD', 'purdy.hortense@example.org', NULL, '$2y$10$cGgC8s6BDRts6aCURps7xehzRF6fPrbJxSbm1Nn3JXPmGXNDT251y', NULL, NULL, NULL),
+(7, 'Francisca Becker Jr.', 'syble91@example.com', NULL, '$2y$10$Us0sstiY/Aai/XW6Qcu7segKK6mvZKzFfFV4EmIm4uIoQE1GLq/g2', NULL, NULL, NULL),
+(8, 'Vivianne Pollich', 'darian39@example.org', NULL, '$2y$10$Mplbwmlppku4jUHLw.ylger6FG.J0jH9QzkAezZc0g3Pd02MgobuG', NULL, NULL, NULL),
+(9, 'Franco Smitham IV', 'lkihn@example.com', NULL, '$2y$10$sixOdzYZp3ymPYXgU1sfcuCoRzbxIlXi70nUjoWaNuxXxH30QqzSC', NULL, NULL, NULL),
+(10, 'Dr. Hertha Emard', 'walsh.cortney@example.com', NULL, '$2y$10$H.cKFJHirUR1OFPQkFl4NuKPJ0cHUTWbX3d2hogmi49L8LCC1LX4e', NULL, NULL, NULL),
+(11, 'Md Abir Hossain', 'abirhasan282@gmail.com', NULL, '$2y$10$XCk/TjvKQ4sBPfwgXprsr.Fututt2n7p6xhh1BCWt8Kfyw11aWuEi', NULL, '2021-10-30 03:49:44', '2021-10-30 03:49:44');
 
 --
 -- Indexes for dumped tables
@@ -256,7 +255,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `services`
